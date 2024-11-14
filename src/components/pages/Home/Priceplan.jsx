@@ -103,22 +103,28 @@ const Priceplan = () => {
               key={index}
               sx={{
                 width: '90%',
-                height: 'auto',
+                height: '700px',
                 background: '#FAFBFF',
-                border: plan.title === 'Premium'?'2px solid #673de6':'2px solid #dee5fc',
+                border: plan.title === 'Premium'?'2px solid #8C85FF':'2px solid #dee5fc',
                 borderRadius: 3,
-                paddingY: 4,
-                paddingX: 2,
+                paddingY: plan.title === 'Premium'?0:6,
+                paddingX: plan.title === 'Premium'?0:2,
                 color: '#2F1C64',
                 margin: '0 auto',
               }}
             >
+              {/* adding  Most popular heading in premium plan  */}
+              {plan.title === "Premium"? <Typography sx={{backgroundColor:"#8C85FF",
+                color:"white", textAlign:'center', height: "2rem" ,paddingY:1, fontSize:"14px"
+              }}>MOST POPULAR</Typography>:""}
+              
               <CardContent>
                 <Typography
                   variant="h6"
                   sx={{
                     fontWeight: 'bold',
                     paddingBottom: 1,
+                    paddingTop:plan.title === 'Premium' ? 2:0,
                     textAlign: 'left',
                     color: plan.title === 'Premium' ? '#673de6' : '#2F1C64', // Dynamic color for Premium
                   }}
@@ -189,19 +195,25 @@ const Priceplan = () => {
                 background: '#FAFBFF',
                 border: plan.title === 'Premium'?'2px solid #8C85FF':'2px solid #dee5fc',
                 borderRadius: 3,
-                paddingY: plan.title === 'Premium'?0:4,
+                paddingY: plan.title === 'Premium'?0:6,
                 paddingX: plan.title === 'Premium'?0:2,
                 color: '#2F1C64',
+                marginY:plan.title === 'Premium'?0:4
               }}
             >
-              {plan.title === "Premium"? <Typography sx={{backgroundColor:"#8C85FF",
-                color:"white", textAlign:'center', height: "1.2rem" ,paddingY:1, fontSize:"14px"
+               {/* adding  Most popular heading in premium plan  */}
+              {plan.title === "Premium"? <Typography sx={{
+                backgroundColor:"#8C85FF",
+                color:"white", textAlign:'center', 
+                height: "1.2rem" ,paddingY:1, fontSize:"14px"
               }}>MOST POPULAR</Typography>:""}
+
               <CardContent>
                 <Typography
                   variant="h6"
                   sx={{
                     fontWeight: 'bold',
+                    paddingTop:plan.title === 'Premium' ? 6:0,
                     paddingBottom: 1,
                     color: plan.title === 'Premium' ? '#673de6' : '#2F1C64', // Dynamic color for Premium
                   }}
