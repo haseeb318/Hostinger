@@ -63,7 +63,7 @@ const pricingPlans = [
   },
 ];
 
-const Priceplan = () => {
+const PricePlan = () => {
   const isMobile = useMediaQuery('(max-width: 900px)'); // Check if the screen is mobile size
 
   return (
@@ -78,6 +78,7 @@ const Priceplan = () => {
             color: '#2F1C64',
             paddingX: 6,
             paddingTop: 5,
+           
           }}
         >
           Pick your perfect plan
@@ -277,4 +278,4 @@ const Priceplan = () => {
   );
 };
 
-export default Priceplan;
+export default PricePlan;

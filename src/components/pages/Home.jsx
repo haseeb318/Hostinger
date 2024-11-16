@@ -1,14 +1,16 @@
 import React from 'react'
-import HeaderContainer from './Home/HeaderContainer'
-import PartnerReviews from './Home/PartnerReviews'
-import Priceplan from './Home/Priceplan'
+import PricePlan from './home/Priceplan'
+import HeaderContainer from './home/HeaderContainer'
+import PartnerReviews from './home/PartnerReviews'
+import TvComp from './TvComp'
 
 const Home = () => {
   return (
    <>
     <HeaderContainer/>
     <PartnerReviews/>
-    <Priceplan/>
+    <PricePlan/>
+    <TvComp/>
    </>
   )
 }
